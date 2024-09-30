@@ -1,0 +1,79 @@
+.tech-bg {
+  background-image: url(./assets/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.tech-content {
+  display: flex;
+  gap: 64px;
+  height: 100%;
+  align-items: center;
+}
+.tech-links {
+  display: grid;
+  gap: 32px;
+}
+.tech-links a {
+  padding: 22px 32px;
+  border-radius: 50%;
+  border: solid 1px var(--gray);
+  text-align: center;
+}
+.tech-links a.ativo,
+.tech-links a:hover {
+  background-color: var(--white);
+  color: black;
+}
+.tech-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
+}
+.launch-info h2 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+    .container-3 {
+        padding: 50px 0px 50px 40px;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .launch-info p {
+        font-size: 0.875rem;
+    }
+
+}
+@media (max-width: 900px) {
+    .container-3 {
+        padding: 40px 0px 40px 40px;
+    }
+    .tech-info {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+    .tech-content {
+        grid-row: 2;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .tech-links {
+        display: flex;
+    }
+    .tech-links a {
+        padding: 12px 25px;
+    }
+    .tech-info img {
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 20px;
+    }
+    .launch-info {
+        text-align: center;
+        padding-right: 40px;
+    }
+}

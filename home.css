@@ -1,0 +1,48 @@
+.home-bg {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    display: grid;
+}
+.home-content {
+    padding-top: 140px;
+    display: grid;
+    gap: 24px;
+}
+.home-sec {
+    align-items: end;
+    gap: 20px;
+}
+.btn-div {
+    place-self: end;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+@media (max-width: 1200px) {
+    .container {
+        padding: 100px 40px;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .btn-div {
+        justify-self: center;
+    }
+    .home-content {
+        justify-items: center;
+        padding-top: 0px;
+    }
+    .home-content p {
+        text-align: center;
+        max-width: 60ch;
+    }
+}
+
+@media (max-width: 800px) {
+    .home-bg {
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+    .container {
+        padding: 50px 40px;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+}

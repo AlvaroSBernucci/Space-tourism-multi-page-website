@@ -1,0 +1,98 @@
+.destination-bg {
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.infos-grid {
+    display: grid;
+    gap: 40px;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+.travel-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.travel-info p {
+    margin-top: 12px;
+}
+.planet-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    height: 100%;
+    align-items: center;
+}
+.container-2 h1 {
+    margin-bottom: 24px;
+}
+.planet-links {
+    display: flex;
+    gap: 32px;
+}
+.container-dest {
+    height: 100%;
+    grid-template-rows: auto 1fr;
+}
+.planet-links a.ativo {
+    color: var(--white);
+    padding-bottom: 13px;
+    border-bottom: 2px solid var(--white);
+}
+[data-detail='description'] {
+    height: 170px;
+}
+@media (max-width: 1200px) {
+    .container-2 {
+        padding: 100px 40px;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .infos-grid {
+        padding-right: 0px;
+    }
+}
+@media (max-width: 800px) {
+    .container-2 {
+        padding: 40px;
+    }
+    .destination-bg {
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+    .planet-info {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .planet-info img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+    .infos-grid {
+        padding: 0px;
+        justify-items: center;
+    }
+    .infos-grid p {
+        text-align: center;
+        height: auto;
+    }
+}
+@media (max-width: 800px) {
+    .infos-grid {
+        gap: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .planet-info img {
+        max-height: 150px;
+        max-width: 150px;
+    }
+    .planet-info,
+    .infos-grid {
+        gap: 10px;
+    }
+    .travel-info {
+        grid-template-columns: 1fr;
+    }
+}
