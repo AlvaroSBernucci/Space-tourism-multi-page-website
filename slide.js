@@ -34,6 +34,7 @@ export default class Slide {
         const pageContent = await this.fetchInfo(index);
         this.changeValue(pageContent);
         this.activeClass(event.target);
+        if (this.page === 'technology') this.resizeImg();
     }
     async fetchInfo(index) {
         const pageResponse = await fetch('./data.json');
@@ -41,11 +42,23 @@ export default class Slide {
         const pageAcive = pageJSON[this.page];
         return (pageAcive[index]);
     }
+    resizeImg(event) {
+        const img = document.querySelector('#img-dinamica');
+        let imgSrc = img.src;
+        let imgLandscape = imgSrc.replace(/portrait/g,'landscape');
+        let imgPortait = imgSrc.replace(/landscape/g,'portrait');
+        if (window.innerWidth <= 800) img.src = imgLandscape
+        else img.src = imgPortait
+    }
     addEventClick() {
         this.links.forEach((link,index) => link.addEventListener('click',(event) => this.handleClick(event,index)));
     }
+    addResizeEvent() {
+        window.addEventListener('resize', this.resizeImg);
+    }
     bindEvents() {
         this.handleClick = this.handleClick.bind(this);
+        this.resizeImg = this.resizeImg.bind(this);
     }
     init() {
         this.bindEvents();
