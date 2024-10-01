@@ -1,4 +1,8 @@
 .btn {
+    border-radius: 50%;
+    border: none;
+}
+.btn a {
     padding: 118px 68px;
     background-color: var(--white);
     border: none;
